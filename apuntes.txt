@@ -1,0 +1,16 @@
+Ciclo de vida de un componente: 
+Montado: cuando se va a renderizar, cuando va a entrar en acción --> usamos el metodo constructor 
+CpomponentWIllMount: el componente apenas se va a montar, por ejemplo para setear cosas previo al montado no es recomendado para hacer bind de eventos como traer datos del api --> 
+render: contiene todos los elementos a renderizar, aqui es cuando ya se va ahaber
+componentDidMount: metofdo luego de montarse el componente, aqui ya podemos usar las apis del navegador, en este momento podemos pedir datos al api
+
+ComponentWillRevicePorps: metodo llamado al recibir nuevas propiedades, sirve para acutlizar estadoc on base a las nuevas propiedades
+shouldComponentUpdate: Metodo que condiciona si el componente se debe renderizar
+componentWIllUpdate: renderizara el componente, le sigue el render
+componentDidUpdate: cuando el compoente ya se actualizo
+
+Desmontado: cuando ya se va a ir el compoente
+componentWillAnmount: antes de que el componente sea desmontado de la palicación adiooooos
+
+Manejo de errores: 
+COmponentDidCatch: cuando el compoenente ya encontro un error, este es el metodo del ciclo de vida que sera llamado
