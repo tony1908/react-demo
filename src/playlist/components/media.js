@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types'
 import './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            author: props.author
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         author: props.author
+    //     }
+    // }
 
     // state: {
     //     author: p
@@ -17,11 +17,11 @@ class Media extends Component {
 
    //si se usa el arrow function, por sus propiedades hereda el contexto del padre
     //las propiedades son inmutables, lo que es mutable es el estado
-    handleClick = (event) => {
-        this.setState({
-            author: 'AUTOR',
-        })
-    }
+    // handleClick = (event) => {
+    //     this.setState({
+    //         author: 'AUTOR',
+    //     })
+    // }
 
     render() {
         return (
@@ -29,14 +29,14 @@ class Media extends Component {
             <div className='Media' onClick={this.handleClick}>
                 <div className='Media-cover' >
                     <img 
-                        src={this.props.image}
+                        src={this.props.cover}
                         alt=""
-                        width={260}
+                        width={240}
                         height={160}
                         className='Media-image'
                     />
                     <h3 className='Media-title'>{this.props.title}</h3>
-                    <p className='Media-author'>{this.state.author}</p>
+                    <p className='Media-author'>{this.props.author}</p>
                 </div>
             </div>
         )
@@ -44,7 +44,7 @@ class Media extends Component {
 }
 
 Media.propTypes = {
-    image: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['video', 'audio'])

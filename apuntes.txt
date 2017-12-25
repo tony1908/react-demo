@@ -14,3 +14,21 @@ componentWillAnmount: antes de que el componente sea desmontado de la palicació
 
 Manejo de errores: 
 COmponentDidCatch: cuando el compoenente ya encontro un error, este es el metodo del ciclo de vida que sera llamado
+
+Tipos de componenetes:
+
+compinetes puros: ya tiene shouldComponentUpdate ya asigando, cuando el compoenente se vaya a modificar constantemente se debe usar este
+
+componenetes funcionales: son funciones y solo retornan vistas, no tienen logica. no tienen ciclo de vida, es solo para la ui
+
+dumb components y smartcomponetes:
+
+dumb compponent: se fija encomo se ve, úede contener cualuqier tipo de componentens, permiten composicion con {props.childeres}, no depende del resto de la aplicacion
+no especifica como los datos son cargados y como muta (recibe los datos directos), recibe datos y callbacks solo por propiedades, rara vez tiene su propio estado,
+estan escritos como componentes funcionales, al menos que necesiten mejoras de performance
+
+smart componente: se fifa en que hace, se concentran een el funcionamiento, van a cambiar los estados, etc, contiene componentes de ui u  otros smart componentes,
+no tienen estilos eso es super imporntnte, proven de datos a la ui y a otros compoenentes, proven de calbacks a la ui, normalmente tienen estado, llaman acciones, 
+generados por higher order components
+
+
