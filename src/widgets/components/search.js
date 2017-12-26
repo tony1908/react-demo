@@ -9,11 +9,17 @@ import './search.css'
 
 const Search = (props) => {
     return (
-        <form className="Search" action="">
+        <form 
+            className="Search"
+            onSubmit={props.handleSubmit}
+        >
             <input 
+                ref={props.setRef}
                 type="text" 
                 placeholder="Busca tu video favorito"
                 className="Search-input"
+                onChange={props.handleChange}
+                value={props.value}
             />
         </form>
     )
