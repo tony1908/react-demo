@@ -11,7 +11,7 @@ function Playlist(props) {
                 {
                     playlist.map((item) => {
                         // usmos {...item} porque en ecma 7 nos va a descomponer los elemento a cada una de las propiedades
-                        return  <Media handleClick={props.handleOpenModal} key={item.id} {...item} />
+                        return  <Media openModal={props.handleOpenModal} key={item.id} {...item} />
                     })
                 }
                

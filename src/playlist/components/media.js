@@ -17,16 +17,17 @@ class Media extends PureComponent {
 
    //si se usa el arrow function, por sus propiedades hereda el contexto del padre
     //las propiedades son inmutables, lo que es mutable es el estado
-    // handleClick = (event) => {
-    //     this.setState({
-    //         author: 'AUTOR',
-    //     })
-    // }
+    handleClick = (event) => {
+        // this.setState({
+        //     author: 'AUTOR',
+        // })
+        this.props.openModal(this.props)
+    }
 
     render() {
         return (
             //todo esto es jsx
-            <div className='Media' onClick={this.props.handleClick}>
+            <div className='Media' onClick={this.handleClick}>
                 <div className='Media-cover' >
                     <img 
                         src={this.props.cover}
